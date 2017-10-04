@@ -1,0 +1,209 @@
+.make-own{
+    padding: 82px 14px 162px;
+    margin: 0 auto;
+    background-color: #F8FCFF;
+    .make-own-title{
+    	max-width: 550px;
+        margin: 81px auto 0;
+        font-family: Roboto,sans-serif;
+        font-size: 1.875em;
+        line-height: 1.5;
+        color: #22282b;
+        text-align: center;
+    }
+    
+    .make-own-under-title{
+    	max-width: 512px;
+        margin: 6px auto 0;
+        font-family: "Source Sans Pro",Helvetica,sans-serif;
+        font-size: 1.125em;
+        line-height: 1.7;
+        color: #687782;
+        text-align: center;
+    }
+    .make-own-anims{
+        margin-top: 35px;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        flex-direction: row;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        .anims__left{
+            width: 50%;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; 
+            @media only screen and (max-width: 990px){
+                 width: 100%;
+                 align-items: center;
+            }
+            .anim{
+                margin-top: 53px;
+                padding-left: 35px;
+                position: relative;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                flex-direction: row;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                
+                .anim__left{
+                    position: absolute;
+                    width: 50px;
+                    height: 100%;
+                    top:0;
+                    left:0;
+                    .anim__logo-blue{
+                        opacity:0;
+                        transition: all 0.25s;
+                    }
+                    .anim__logo-grey{
+                        opacity:1;
+                        transition: all 0.25s;
+                    }
+                    
+                    img{
+                        position: absolute;
+                        left:0;
+                        top:50%;
+                        transform: translateY(-50%);
+                    }
+                    
+                }
+                .anim__right{
+                    width: 100%;
+                    max-width: 390px;
+                    margin-left: 20px;
+                    .anim__title{
+                        font-size: 1.25em;
+                        line-height: 1.25;
+                        letter-spacing: normal;
+                        color: #22282b;
+                        transition: all 0.25s;
+                    }
+                    .anim__content{
+                        margin-top: 9px;
+                        font-size: 18px;
+                        font-size: 1.125em;
+                        line-height: 1.67;
+                        letter-spacing: normal;
+                        color: #687782;
+                    }
+                }
+            }
+            .active{
+                .anim__logo-blue{
+                    opacity: 1 !important;
+                    
+                }
+                .anim__logo-grey{
+                    opacity: 0 !important;
+                    
+                }
+                .anim__title{
+                    color: #9475E3 !important;
+                }
+            }
+        }
+        .anims__right{
+            position: relative;
+            width: 50%;
+            display: flex;
+            margin-top:53px;
+            right:0;
+            flex-direction: column;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            @media only screen and (max-width: 990px){
+                 display: none;
+            }
+            img{
+                width: 145px;
+                height: 145px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+            .line-container{
+                position:relative;
+                svg:not(:root){
+                    position: absolute;
+                    transition:0.25s;
+                }
+                .blue{
+                    opacity:0;
+                }
+                .path {
+                  stroke-dasharray: 392.825, 392.825;
+                  stroke-dashoffset: 390px;
+                  animation: fillPath 0.5s linear;
+                  animation-fill-mode:forwards;
+                }
+                
+                .pathOpposite{
+                  stroke-dasharray: 392.825, 392.825;
+                  stroke-dashoffset: 390px;
+                  animation: fillPathOpposite 0.5s linear;
+                  animation-fill-mode:forwards;
+                }
+                
+                @keyframes fillPath {
+                  from {
+                    stroke-dashoffset: 390px;
+                  }
+                  to {
+                    stroke-dashoffset: 0;
+                  }
+                }
+                @keyframes fillPathOpposite {
+                  from {
+                    stroke-dashoffset: 390px;
+                  }
+                  to {
+                    stroke-dashoffset: 790px;
+                  }
+                }
+                
+            }
+            .line-container--1{
+                width: 273px;
+                height: 156px;
+            }
+            .line-container--2{
+                width: 336px;
+                height: 12px;
+                }
+            .line-container--3{
+                width: 273px;
+                height: 156px;
+            }
+        }
+    }
+    
+    
+}

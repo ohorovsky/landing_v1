@@ -1,0 +1,254 @@
+.top-slider{
+	padding-top: 162px;
+	//background-color: #EDEAF6;
+}
+.top-slider-title{
+	max-width: 550px;
+    margin: 0px auto;
+    font-family: Roboto,sans-serif;
+    font-size: 1.875em;
+    line-height: 1.5;
+    color: #22282b;
+    text-align: center;
+}
+
+.top-slider-under-title{
+	max-width: 750px;
+    margin: 9px auto 0;
+    font-family: "Source Sans Pro",Helvetica,sans-serif;
+    font-size: 1.125em;
+    line-height: 1.7;
+    color: #687782;
+    text-align: center;
+}
+
+.actual-slider{
+	
+	#myCarousel{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.carousel-indicators{
+		// top:0px;
+		// color:blue;
+
+		//  li{
+		//  	width:auto;
+		//  	text-indent: 0;
+		//  }
+		position: relative;
+		transform: translateX(-50%);
+	    width: 100%;
+	    max-width: 863px;
+	    margin: 32px 0 45px;
+	    display: table;
+	    
+	    li{
+	    	display: table-cell;
+	    	text-indent: 0;
+	    	padding: 0 16px 16px;
+	    	border: none;
+	    	border-bottom: 1px solid rgba(0,0,0,0.1);
+	    	border-radius: 0px;
+	    	margin:0;
+	    	transition: 0.25s;
+	    }
+	    li.active{
+	    	color: #9475E3;
+	    	border-bottom: 1px solid #9475E3;
+	    	background: none;
+	    }
+	}
+
+	.carousel-inner{
+		z-index: 2;
+	    margin: 0 auto;
+	    width: 100%;
+	    max-width: 943px;
+	    overflow: visible;
+	    @media only screen and (max-width: 992px){
+	    	overflow: hidden;
+	    }
+			
+			.item{
+				//position: relative; <- causes big trouble put a wrapper inside the item another div..
+				// and give tot that div a position relative and put inside image & Dot!!! 
+				img{
+					min-width:100%;
+				}
+				.slider-content{
+					position: absolute;
+					top: 0;
+					left: 0;
+					max-width: 250px;
+					background: #fff;
+				    border-radius: 4px;
+				    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+				    .content-container{
+				    	position: relative;
+				    	.dot{
+				    		position: absolute;
+				    		top: 50%;
+				    		transform: translateY(-50%);
+				    		width: 10px;
+				    		height: 10px;
+				    		border-radius: 50%;
+				    		background-color: #9475E3;
+				    	}
+				    	.content{
+				    		padding: 20px;
+				    	}
+				    }
+				}
+				
+				.dot-1{
+					top: 10%;
+					left: 20%;
+					.dot{
+						left: -20px;
+					}
+				}
+				.dot-2{
+					top: 30%;
+					left: 60%;
+					.dot{
+						right: -20px;
+					}
+				}
+				.dot-3{
+					top: 60%;
+					left: 50%;
+					.dot{
+						left: -20px;
+					}
+				}
+				
+			}
+			
+			.carousel-control{
+				background-image: none;
+				font-size:5em;
+				width: 50%;
+				z-index: 5;
+				
+				.prevArrow{
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translate(0, -50%)
+					}
+				.nextArrow{
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(0, -50%)
+					}
+			}
+			.left{
+				transform: translateX(-15%);
+				@media only screen and (max-width: 992px){
+			    	transform: translateX(0);
+			    }
+			}
+			.right{
+				transform: translateX(15%);
+				@media only screen and (max-width: 992px){
+			    	transform: translateX(0);
+			    }
+			}
+
+	}
+	
+	.under-carousel{
+	padding-top:100px; padding-bottom: 15px;
+	position:relative;
+	.path-left{
+		position: absolute;
+		top:10%;
+		left:10%;
+		height:80px;
+		width:50px;
+		img{
+			width:100%;
+			height: 100%;
+			opacity: 0;
+			transition: 1s;
+		}
+		.activatePath{
+			opacity: 1;
+			
+		}
+		
+	}
+	.path-right{
+		position: absolute;
+		top:10%;
+		right:10%;
+		height:80px;
+		width:50px;
+		img{
+			width:100%;
+			height: 100%;
+			transform: rotateY(180deg);
+			opacity: 0;
+			transition: 1s;
+		}
+		.activatePath{
+			opacity: 1;
+			
+		}
+		
+	}
+	
+	ul{
+		margin:0;
+		padding:0;
+		width:100%;
+		text-align: center;
+		height:45px;
+		display: table;
+	
+		li{
+			list-style: none;
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 3em;
+			color:#082D3F;
+			opacity: 0;
+			transform: translate(0, 20px) scale(0);
+			transition: 0.5s;
+			@media only screen and (max-width: 570px){
+		         font-size: 2em;
+		    }
+			
+		
+		}
+		
+		.activeIcon{
+			opacity: 1;
+			transform: translate(0, 0px) scale(1);
+		}
+
+
+	}
+}
+	
+}
+
+.under-slider{
+	padding-bottom: 152px;
+	//background-color: #EDEAF6;
+	h3{
+		font-size: 1.5em;
+		line-height: 1.8;
+		color: #22282b;
+	}
+	p{
+		color: #687782;
+		font-size: 1.06em;
+		text-align: justify;
+		line-height: 1.8;
+		
+
+	}
+}
