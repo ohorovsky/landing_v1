@@ -78,7 +78,7 @@ var navbar = document.querySelector('nav');
 var topHeader = document.querySelector('.top-header');
 
 window.addEventListener('scroll', function () {
-  console.log(navbar.offsetHeight);
+
   if (window.scrollY > topHeader.offsetHeight / 2) {
     navbar.classList.add('fixed');
   }
@@ -114,7 +114,6 @@ var triggers = document.querySelectorAll('.dropdown');
 var background = document.querySelector('.dropdownBackground');
 var nav = document.querySelector('.navbar-collapse');
 
-console.dir(nav);
 function handleEnter() {
   var _this = this;
 

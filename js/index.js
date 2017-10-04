@@ -6,7 +6,7 @@ const navbar = document.querySelector('nav');
 const topHeader = document.querySelector('.top-header');
 
 window.addEventListener('scroll', () => {
-  console.log(navbar.offsetHeight)
+  
   if(window.scrollY > topHeader.offsetHeight / 2){
     navbar.classList.add('fixed');
   }
@@ -43,7 +43,7 @@ navButton.addEventListener('click', function(){
   const background = document.querySelector('.dropdownBackground');
   const nav = document.querySelector('.navbar-collapse');
   
-  console.dir(nav)
+  
   function handleEnter(){
     if(!nav.classList.contains('in')){ //this class 'in' is added only when there is collapsed menu in small devices
       this.classList.add('trigger-enter');
